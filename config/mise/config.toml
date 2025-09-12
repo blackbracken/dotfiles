@@ -1,8 +1,12 @@
 [tools]
-node = "latest"
 java = "openjdk-21"
 kotlin = "latest"
 rust = "latest"
 go = "1.24"
 
+node = "latest"
+uv = "latest"
+
 "npm:@anthropic-ai/claude-code" = "latest"
+"npm:pnpm" = "latest-10"
+"npm:wrangler" = "latest"
