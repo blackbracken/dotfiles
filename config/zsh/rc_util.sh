@@ -2,6 +2,13 @@
 
 # utils for interactive zsh
 
+eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
+
+precmd() {
+  print -Pn "\e]0;${PWD##*/}\a"
+}
+
 # history
 export HISTFILE="${HOME}/.zsh_history"
 export HISTSIZE=200000
@@ -18,6 +25,7 @@ alias "vim"="nvim"
 alias "hist"="history -nr 1 | fzf"
 alias "repo"='cd "$(ghq list -p | fzf)"'
 alias "gsf"="git branch -a | fzf | sed 's/remotes\/origin\///g' | xargs git switch"
+alias "ghqcd"='p=$(ghq list -p | fzf) && [ -n "$p" ] && cd "$p"'
 
 # npx
 alias "ccusage"="npx ccusage"

@@ -15,6 +15,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
   Plug 'airblade/vim-gitgutter'
+  Plug 'nvim-tree/nvim-tree.lua'
+  Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 
 " display
@@ -55,11 +57,40 @@ set smarttab
 
 " encode
 set encoding=utf-8
-set fileencoding=utf-8
+setglobal fileencoding=utf-8
 
 " etc
 set clipboard=unnamed
 set mouse=a
 
+" nvim-tree setup
+lua << EOF
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = false,
+  },
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    require("nvim-tree.api").tree.open()
+  end
+})
+EOF
+
 " key binds
-"nnoremap <silent><A-1> :NERDTreeToggle<CR>
+let mapleader = " "
+
+nnoremap <silent><leader>e :NvimTreeToggle<CR>
+nnoremap <silent><leader>r :NvimTreeRefresh<CR>
+nnoremap <silent><leader>n :NvimTreeFindFile<CR>

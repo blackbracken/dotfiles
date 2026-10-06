@@ -1,12 +1,10 @@
 [tools]
-java = "openjdk-21"
-kotlin = "latest"
-rust = "latest"
-go = "1.24"
+go = "1.27"
 
 node = "latest"
 uv = "latest"
 
 "npm:@anthropic-ai/claude-code" = "latest"
-"npm:pnpm" = "latest-10"
-"npm:wrangler" = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["node"]
