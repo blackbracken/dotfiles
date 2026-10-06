@@ -22,5 +22,6 @@ brew "colima"
 
 # Mac App
 cask "font-jetbrains-mono"
+cask "rectangle"
 cask "visual-studio-code"
 cask "wezterm"

@@ -21,5 +21,8 @@ link config/wezterm/.wezterm.lua ~/.wezterm.lua
 
 cp config/git/.gitconfig ~/.gitconfig
 
+mkdir -p ~/Library/Application\ Support/Rectangle
+cp config/rectangle/RectangleConfig.json ~/Library/Application\ Support/Rectangle/RectangleConfig.json
+
 line="source $PWD/config/zsh/common.zsh"
 grep -qF "config/zsh/common.zsh" ~/.zshrc 2>/dev/null || echo "$line" >> ~/.zshrc
