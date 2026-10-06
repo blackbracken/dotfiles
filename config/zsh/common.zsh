@@ -26,7 +26,3 @@ alias "hist"="history -nr 1 | fzf"
 alias "repo"='cd "$(ghq list -p | fzf)"'
 alias "gsf"="git branch -a | fzf | sed 's/remotes\/origin\///g' | xargs git switch"
 alias "ghqcd"='p=$(ghq list -p | fzf) && [ -n "$p" ] && cd "$p"'
-
-# npx
-alias "ccusage"="npx ccusage"
-alias "difit"="npx difit"

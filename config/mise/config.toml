@@ -4,7 +4,5 @@ go = "1.27"
 node = "latest"
 uv = "latest"
 
-"npm:@anthropic-ai/claude-code" = "latest"
-
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
