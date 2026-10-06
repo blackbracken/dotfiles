@@ -5,3 +5,5 @@
     autocrlf = input
 [push]
 	autoSetupRemote = true
+[ghq]
+	root = ~/src
