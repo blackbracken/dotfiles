@@ -11,9 +11,7 @@ brew bundle --file=Brewfile
 link config/mise/config.toml ~/.config/mise/config.toml
 mise install
 
-link config/neovim/init.vim ~/.config/nvim/init.vim
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+link config/neovim ~/.config/nvim
 
 link config/starship/starship.toml ~/.config/starship.toml
 

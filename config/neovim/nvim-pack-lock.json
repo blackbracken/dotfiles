@@ -1,0 +1,12 @@
+{
+  "plugins": {
+    "iceberg.vim": {
+      "rev": "23835d5ed696436f716cbfdb56a93a7850fe3b18",
+      "src": "https://github.com/cocopon/iceberg.vim"
+    },
+    "lightline.vim": {
+      "rev": "255f61db1a4cc36ee11eb479261d6bc471ed0819",
+      "src": "https://github.com/itchyny/lightline.vim"
+    }
+  }
+}
