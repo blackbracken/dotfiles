@@ -1,0 +1,19 @@
+{
+  "env": {
+    "BASH_DEFAULT_TIMEOUT_MS": "1200000",
+    "BASH_MAX_TIMEOUT_MS": "1200000",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "autoMemoryEnabled": false,
+  "tui": "fullscreen",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "attribution": {
+    "commit": ""
+  }
+}

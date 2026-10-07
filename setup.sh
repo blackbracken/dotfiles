@@ -19,6 +19,12 @@ link config/wezterm/.wezterm.lua ~/.wezterm.lua
 
 cp config/git/.gitconfig ~/.gitconfig
 
+link config/claude/CLAUDE.md ~/.claude/CLAUDE.md
+link config/claude/statusline.sh ~/.claude/statusline.sh
+settings=~/.claude/settings.json
+[ -f "$settings" ] || echo '{}' > "$settings"
+jq -s '.[0] * .[1]' "$settings" config/claude/settings.json > "$settings.tmp" && mv "$settings.tmp" "$settings"
+
 mkdir -p ~/Library/Application\ Support/Rectangle
 cp config/rectangle/RectangleConfig.json ~/Library/Application\ Support/Rectangle/RectangleConfig.json
 
