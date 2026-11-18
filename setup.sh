@@ -32,6 +32,7 @@ step "git done"
 
 link config/claude/CLAUDE.md ~/.claude/CLAUDE.md
 link config/claude/statusline.sh ~/.claude/statusline.sh
+link config/claude/keybindings.json ~/.claude/keybindings.json
 settings=~/.claude/settings.json
 [ -f "$settings" ] || echo '{}' > "$settings"
 jq -s '.[0] * .[1]' "$settings" config/claude/settings.json > "$settings.tmp"
